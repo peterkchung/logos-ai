@@ -1,10 +1,8 @@
-# IntelliAgent - Conversational Assistants
+# IntelliAgent - Conversational Agent Framework
 
-## Driven by open-sourced models, platforms, and frameworks.
+## Developed with an OSS first mission, this framework builds on the growing research behind collective and collaborative agent tasking, an area where smaller, open-sourced models have the opportunity to outperform based on cost, privacy, and latency.
 
-Developed with an OSS first mission. This framework builds on the growing research behind collective and collaborative agent tasking.
-
-A central agent drives planning and delegation, while  specicialized agents are tasked with delivering specifics outputs to help meet the user's queries.
+A central agent drives planning and delegation, while specicialized agents are tasked with delivering specifics outputs to help meet the user's queries.
 
 Very early prototyping. Please follow for updates.
 
