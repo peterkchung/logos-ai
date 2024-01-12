@@ -2,127 +2,123 @@ import os
 from huggingface_hub import InferenceClient
 
 """
-https://huggingface.co/docs/huggingface_hub/v0.20.2/en/package_reference/inference_client#huggingface_hub.InferenceClient
+This file contains the base classes for creating agents in the IntelliAgent framework.
 
-:params:
-:model (str, optional) — The model to run inference with. Can be a model id hosted on the Hugging Face Hub, e.g. bigcode/starcoder or a URL to a deployed Inference Endpoint. Defaults to None, in which case a recommended model is automatically selected for the task.
-
-:token (str, optional) — Hugging Face token. Will default to the locally saved token. Pass token=False if you don’t want to send your token to the server.
-
-:timeout (float, optional) — The maximum number of seconds to wait for a response from the server. Loading a new model in Inference API can take up to several minutes. Defaults to None, meaning it will loop until the server is available.
-
-:headers (Dict[str, str], optional) — Additional headers to send to the server. By default only the authorization and user-agent headers are sent. Values in this dictionary will override the default values.
-:cookies (Dict[str, str], optional) — Additional cookies to send to the server.
+- Step: Represents a step in the agent's workflow, such as a thought, an action, or an output.
+- Agent: Represents an object bound to a language model (LLM) and optional tools to execute tasks.
 
 """
 
-default_model = "mistralai/Mixtral-8x7B-Instruct-v0.1"
-
-client = InferenceClient(
-    model = default_model,
-    token = False
-)
-
-
-"""
-research agent
-text-classification > action
-
-https://huggingface.co/docs/huggingface_hub/v0.20.2/en/package_reference/inference_client#huggingface_hub.InferenceClient.text_classification
-
-:params:
-:text (str) — A string to be classified.
-
-:model (str, optional) — The model to use for the text classification task. Can be a model ID hosted on the Hugging Face Hub or a URL to a deployed Inference Endpoint. If not provided, the default recommended text classification model will be used. Defaults to None.
-
-"""
-
-client.text_classification(
+class Step:
     
-)
+    """
+    'Step' class is an object representing a step in the agent's workflow.
 
-
-
-"""
-https://huggingface.co/docs/huggingface_hub/v0.20.2/en/package_reference/inference_client#huggingface_hub.InferenceClient.text_generation
-
-:params:
-:prompt (str) — Input text.
-
-:details (bool, optional) — By default, text_generation returns a string. Pass details=True if you want a 
-
-:detailed output (tokens, probabilities, seed, finish reason, etc.). Only available for models running on with the text-generation-inference backend.
-
-:stream (bool, optional) — By default, text_generation returns the full generated text. Pass stream=True if you want a stream of tokens to be returned. Only available for models running on with the text-generation-inference backend.
-
-:model (str, optional) — The model to use for inference. Can be a model ID hosted on the Hugging Face Hub or a URL to a deployed Inference Endpoint. This parameter overrides the model defined at the instance level. Defaults to None.
-
-:do_sample (bool) — Activate logits sampling
-
-:max_new_tokens (int) — Maximum number of generated tokens
-
-:best_of (int) — Generate best_of sequences and return the one if the highest token logprobs
-
-:repetition_penalty (float) — The parameter for repetition penalty. 1.0 means no penalty. See this paper for more details.
-
-:return_full_text (bool) — Whether to prepend the prompt to the generated text
-
-:seed (int) — Random sampling seed
-
-:stop_sequences (List[str]) — Stop generating tokens if a member of stop_sequences is generated
-
-:temperature (float) — The value used to module the logits distribution.
-
-:top_k (int) — The number of highest probability vocabulary tokens to keep for top-k-filtering.
-
-:top_p (float) — If set to < 1, only the smallest set of most probable tokens with probabilities that add up to top_p or higher are kept for generation.
-
-:truncate (int) — Truncate inputs tokens to the given size
-
-:typical_p (float) — Typical Decoding mass See Typical Decoding for Natural Language Generation for more information
-
-:watermark (bool) — Watermarking with A Watermark for Large Language Models
-
-:decoder_input_details (bool) — Return the decoder input token logprobs and ids. You must set details=True as well for it to be taken into account. Defaults to False.
-
-"""
-
-client.text_generation(
+    The step could be a thought, an action, or an output.
     
-)
-
-
-"""
-research agent
-text-classification > action
-
-https://huggingface.co/docs/huggingface_hub/v0.20.2/en/package_reference/inference_client#huggingface_hub.InferenceClient.text_classification
-
-:params:
-:text (str) — A string to be classified.
-
-:model (str, optional) — The model to use for the text classification task. Can be a model ID hosted on the Hugging Face Hub or a URL to a deployed Inference Endpoint. If not provided, the default recommended text classification model will be used. Defaults to None.
-
-"""
-class Tool():
-    def __init__(self):
-        self.name: str = None
-        self.description: str = None
+    Steps are logged to console for debugging and reporting.
     
-    def run():
-        return None
-    
-class Agent():
-    def __init__(self):
+    """
+
+    def __init__(self, **kwargs):
         self
+
+
+class Agent:
     
-    def _evaluate_query():
-        # Evaluate query to assign task
+    """
+    'Agent' class creates an object representing an agent, which represents a LLM equipped with
+    a ReAct/COT prompt and optionally tools to execute on tasks.
+
+    Agents generate steps.
+
+    Each step represents a thought, an action, or an output.
+    
+    """
+
+    def __init__(self, model, prompt, tools, memory, **kwargs):
+        self.model = model
+        self.prompt = prompt
+        self.tools = tools
+        self.memory = memory
+        self.scratpad = None
+
+    def _create_step(self, input):
+        
+        """
+        Create a step based on the evaluated query.
+
+        Args:
+            query (str): The query to be evaluated.
+
+        Returns:
+            Step: The created step object.
+        
+        """
+        
+        """
+        psuedocode:
+        
+        if not scratpad:
+            query input
+            log query
+            evaluate query
+            log evaluation
+            generate next step
+            log next step
+            take action
+            log action decided
+            output provided
+            log output provided
+            evaluate output
+            log evaluation
+            generate next step
+            ...
+            if next step == Final | max_steps:
+                return final
+        
+        """
+        
         return None
     
-    def use_task():
-        # some functcion    
-        eval = _evaluate_query(query)
+    
+    def _evaluate(self, query):
+        
+        """
+        Evaluate the step to determine the next step for the agent.
+
+        Args:
+            query (str): The query to be evaluated.
+
+        Returns:
+            str: The assigned task based on the evaluation of the query.
+        
+        """
+        
+        """
+        psuedocode: 
+        
+        if query:
+            _create_step
+        
+        """
+        return None
+
+    
+    def _use_tool(self, query, tool):
+        
+        """
+        Use a tool based on the evaluated query.
+
+        Args:
+            query (str): The query to be evaluated.
+            tool (Tool): The tool to be used.
+
+        Returns:
+            function: The execute function of the tool if the evaluation matches the tool's description, otherwise None.
+        
+        """
+        eval = self._evaluate_query(query)
         
         if eval == tool.description:
             return tool.execute
