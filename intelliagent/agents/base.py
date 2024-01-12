@@ -106,7 +106,11 @@ https://huggingface.co/docs/huggingface_hub/v0.20.2/en/package_reference/inferen
 """
 class Tool():
     def __init__(self):
-        self
+        self.name: str = None
+        self.description: str = None
+    
+    def run():
+        return None
     
 class Agent():
     def __init__(self):
@@ -116,6 +120,13 @@ class Agent():
         # Evaluate query to assign task
         return None
     
-    def get_task():
+    def use_task():
         # some functcion    
+        eval = _evaluate_query(query)
+        
+        if eval == tool.description:
+            return tool.execute
+        else:
+            pass
+            
         return None
