@@ -33,17 +33,20 @@ Contributions, feedback, critiques welcome!
 
 ---
 
-### License:
-
-Licensed under Apache 2.0: https://github.com/peterkchung/logos-ai?tab=Apache-2.0-1-ov-file
-
----
-
-### Refences:
-
-Tree of Thoughts: Deliberate Problem Solving with Large Language Models https://arxiv.org/abs/2305.10601
-
+Examples
 ```
 example here
 
 ```
+
+---
+
+### License
+.
+Licensed under Apache 2.0: https://github.com/peterkchung/logos-ai?tab=Apache-2.0-1-ov-file
+
+---
+
+### Refences
+
+Tree of Thoughts: Deliberate Problem Solving with Large Language Models https://arxiv.org/abs/2305.10601
