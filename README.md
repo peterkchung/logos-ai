@@ -9,7 +9,9 @@ Logos is an orchestration framework for the planning, organizing, and executing 
 Very early prototyping. Please follow for updates.
 
 Contributions, feedback, critiques welcome!
+
 <br clear="right"/>
+
 ## Setup
 
 ```pip install []```
