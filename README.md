@@ -50,4 +50,6 @@ Licensed under Apache 2.0
 
 ## Refences
 
-Tree of Thoughts: Deliberate Problem Solving with Large Language Models https://arxiv.org/abs/2305.10601
+Reasoning with Language Model is Planning with World Model https://arxiv.org/abs/2305.14992  
+
+Tree of Thoughts: Deliberate Problem Solving with Large Language Models https://arxiv.org/abs/2305.10601  
