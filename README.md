@@ -22,23 +22,23 @@ Contributions, feedback, critiques welcome!
 
 logos  
 ├── query  
-│   ├── parser
-│   ├── schema
-│   ├── example
+│   ├── parser  
+│   ├── schema  
+│   ├── example  
 │   └── ...  
 ├── evaluate  
-│   ├── state
-│   ├── proposal
-│   ├── reward
+│   ├── state  
+│   ├── proposal  
+│   ├── reward  
 │   └── ...  
 ├── reason  
-│   ├── algorithms
-│   └── ...
+│   ├── algorithms  
+│   └── ...  
 ├── util  
-│   ├── models
-│   ├── tools
+│   ├── models  
+│   ├── tools  
 │   └── ...    
-└── executor.py  
+└── executor.py    
 
 ## Notes
 
