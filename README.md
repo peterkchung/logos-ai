@@ -1,13 +1,15 @@
 # Logos AI - Reasoning Engine For Language Models  
 
-*Logos (λόγος): A Greek term used by philosophers meaning "word," "speech," or "reason." In the context of philosophy, it refers to the principle of order and knowledge.*
+<img src="https://github.com/peterkchung/logos-ai/blob/main/tree_of_knowledge.jpg?raw=true" width="400"  align="right" />
+
+### Logos (λόγος): A Greek term used by philosophers meaning "word," "speech," or "reason." In the context of philosophy, it refers to the principle of order and knowledge.
 
 Logos is an orchestration framework for the planning, organizing, and executing of tasks with language models (LMs).
 
 Very early prototyping. Please follow for updates.
 
 Contributions, feedback, critiques welcome!
-
+<br clear="right"/>
 ## Setup
 
 ```pip install []```
