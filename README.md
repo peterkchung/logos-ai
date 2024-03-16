@@ -21,21 +21,30 @@ Contributions, feedback, critiques welcome!
 ## Structure
 
 logos  
-├── engine  
-│   ├── models.py  
+├── query  
+│   ├── parser
+│   ├── schema
+│   ├── example
 │   └── ...  
-├── evaluator  
-│   ├── bfs.py  
+├── evaluate  
+│   ├── state
+│   ├── proposal
+│   ├── reward
 │   └── ...  
+├── reason  
+│   ├── algorithms
+│   └── ...
+├── util  
+│   ├── models
+│   ├── tools
+│   └── ...    
 └── executor.py  
 
 ## Notes
 
 ## License
 
-Licensed under Apache 2.0: https://github.com/peterkchung/logos-ai?tab=Apache-2.0-1-ov-file
-
----
+Licensed under Apache 2.0
 
 ## Refences
 
