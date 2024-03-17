@@ -1,6 +1,6 @@
 # Logos AI - Reasoning Engine For Language Models  
 
-<img src="https://github.com/peterkchung/logos-ai/blob/main/logos-ai.jpg" width="400"  align="right" />
+<img src="https://github.com/peterkchung/logos-ai/blob/main/tree-of-knowledge.jpg" width="400"  align="right" />
 
 ### Logos (λόγος): A Greek term used by philosophers meaning "word," "speech," or "reason." In the context of philosophy, it refers to the principle of order and knowledge.
 
