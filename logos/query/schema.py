@@ -23,6 +23,12 @@ def OutputField(*args, **kwargs):
     return SchemaField(*args, field_type="output", **kwargs)
 
 
+class Schema(BaseModel):
+    system: str = Field(default="You are a helpful AI assistant.")
+    input: int = Field(...)
+    output: int = Field(...)
+
+
 class SchemaMeta(type(BaseModel)):
     def __new__(mcs, name, bases, namespace, **kwargs):
         fields = {}
