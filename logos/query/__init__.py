@@ -1,3 +1,2 @@
-from .query import Query
-
-__all__ = ['Query']
+from .query import *
+from .examples import *
