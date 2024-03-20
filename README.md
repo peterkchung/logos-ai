@@ -26,12 +26,11 @@ Contributions, feedback, critiques welcome!
 
 logos  
 ├── query  
-│   ├── parser  
 │   ├── schema  
 │   ├── example  
 │   └── ...  
 ├── evaluate  
-│   ├── state  
+│   ├── plan  
 │   ├── proposal  
 │   ├── reward  
 │   └── ...  
