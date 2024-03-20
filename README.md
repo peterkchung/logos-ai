@@ -26,22 +26,23 @@ Contributions, feedback, critiques welcome!
 
 logos  
 ├── query  
+│   ├── query  
 │   ├── schema  
 │   ├── example  
+│   ├── parse  
+│   └── ...  
+├── plan  
+│   ├── proposal  
 │   └── ...  
 ├── evaluate  
-│   ├── plan  
-│   ├── proposal  
+│   ├── method  
 │   ├── reward  
-│   └── ...  
-├── reason  
-│   ├── algorithms  
 │   └── ...  
 ├── util  
 │   ├── models  
 │   ├── tools  
 │   └── ...    
-└── executor.py    
+└── reason.py  
 
 ## Notes
 
