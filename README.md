@@ -31,12 +31,10 @@ logos
 │   ├── example  
 │   ├── parse  
 │   └── ...  
-├── plan  
-│   ├── proposal  
-│   └── ...  
-├── evaluate  
-│   ├── method  
+├── sequence  
+│   ├── proposal    
 │   ├── reward  
+│   ├── method  
 │   └── ...  
 ├── util  
 │   ├── models  
